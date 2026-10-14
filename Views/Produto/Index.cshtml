@@ -1,0 +1,33 @@
+@*Passo 3- criar views*@
+@model List<TechStoreMVC.Models.Produto>
+
+@{
+    ViewData[index: "Title"]="Produtos";
+}
+<h1> Lista de produtos </h1>
+
+<table class="table table striped">
+    <thead>
+        <tr>
+     <th>Id</th>
+     <th>Nome</th>
+     <th>Preço</th>
+     <th>Estoque</th>
+     <th>Ações</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Produto produto in Model)
+        {
+            <td> @produto.Id</td>
+            <td> @produto.Nome</td>
+            <td> @produto.Preco.ToString(format:"F2")</td>
+            <td> @produto.Estoque</td>
+            <td>
+                <button class= "btn btn-primary">Detalhes</button>
+            </td>
+
+        }
+    </tbody>
+</table>
