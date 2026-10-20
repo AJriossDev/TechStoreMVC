@@ -4,23 +4,22 @@ namespace TechStoreMVC.Models;
 
 public class Produto
 {//passo 01- criar as models
-//atributos
+ //atributos
+    public int Id { get; set; }
+    public string Nome { get; set; }
+    public decimal Preco { get; set; }
+    public int Estoque { get; set; }
 
-public int Id{get;set;}
-public string Nome{get;set;}
-public decimal Preco{get;set;}
-public int Estoque{get;set;}
-
-public Produto(
-    int id,
-    string nome,
-    decimal preco,
-    int estoque
-)
+    public Produto(
+        int id,
+        string nome,
+        decimal preco,
+        int estoque
+    )
     {
-        Id=id;
-        Nome=nome;
-        Preco=preco;
-        Estoque=estoque;
+        Id = id;
+        Nome = nome;
+        Preco = preco;
+        Estoque = estoque;
     }
 }

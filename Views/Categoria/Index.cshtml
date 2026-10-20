@@ -1,0 +1,28 @@
+@model List<TechStoreMVC.Models.Categoria>
+
+@{
+    ViewData["Title"] = "Lista de Categorias";
+}
+<h1>Categorias</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Situação</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var categoria in Model)
+        {
+            <tr>
+                <td>@categoria.Id</td>
+                <td>@categoria.Nome</td>
+                <td>@categoria.Descricao</td>
+                <td>@(categoria.Ativa ? "Ativa" : "Inativa")</td>
+            </tr>
+        }
+    </tbody>
+</table>
