@@ -1,31 +1,32 @@
-@*Passo 3- criar views*@
 @model TechStoreMVC.Models.Produto
 
 @{
-    ViewData[index: "Title"] = "Produtos";
+    ViewData["Title"] = "Detalhes do Produto";
 }
-<h1> Lista de produtos </h1>
 
-<dl>
+<h1>
+    Lista de Produtos
+</h1>
 
-<dt>class= "col-sm-2>Nome</dt>
-<dd>class= "col-sm-10>@Model.Nome</dd>
+<dl class="row">
+    <dt class="col-sm-2">Nome</dt>
+    <dd class="col-sm-10">@Model.Nome</dd>
 
-<dt>class= "col-sm-2>Preço</dt>
-<dd>class= "col-sm-10>@Model.Preco.ToString(format:"C")</dd>
+    <dt class="col-sm-2">Preço</dt>
+    <dd class="col-sm-10">@Model.Preco.ToString("C")</dd>
 
-<dt>class= "col-sm-2>Estoque</dt>
-<dt>class= "col-sm-10>@Model.Estoque</dt>
+    <dt class="col-sm-2">Estoque</dt>
+    <dd class="col-sm-10">@Model.Estoque</dd>
 </dl>
 
-<a asp-action="= "Edit"
-asp-route-id="@Model.Id"
-class= "btn btn-warning">
-Editar
+<a asp-action="Edit"
+   asp-route-id="@Model.Id"
+   class="btn btn-warning text-info">
+    Editar
 </a>
 
-<a asp-action= "Index"
-asp-route-id="@Model.Id"
-class= "btn btn-warning">
-Voltar 
+<a asp-action="Index"
+   asp-route-id="@Model.Id"
+   class="btn btn-warning">
+    Voltar
 </a>
